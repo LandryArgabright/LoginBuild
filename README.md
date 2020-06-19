@@ -1,2 +1,4 @@
 # LoginBuild
-Getting familiar with Firebase Database
+Getting familiar with Firebase
+- Authentication
+- Firebase Interaction
