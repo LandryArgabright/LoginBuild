@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: ViewController {
+class LoginViewController: UIViewController {
 
     
     @IBOutlet weak var emailTextField: UITextField!
@@ -29,7 +29,7 @@ class LoginViewController: ViewController {
     }
     
 
-    override func setUpElements() {
+    func setUpElements() {
         
         // Hide error label
         errorLabel.alpha = 0

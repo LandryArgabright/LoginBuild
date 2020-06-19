@@ -51,7 +51,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Sfi-vM-Vzx"/>
                     <connections>
-                        <outlet property="loginButton" destination="1zn-Q3-cj0" id="wVW-cr-ChG"/>
+                        <outlet property="loginButton" destination="1zn-Q3-cj0" id="nfQ-uz-fR9"/>
                         <outlet property="signupButton" destination="feb-wx-1cc" id="LXV-kM-dpK"/>
                     </connections>
                 </viewController>
@@ -162,7 +162,7 @@
                                         <rect key="frame" x="0.0" y="280" width="334" height="50"/>
                                         <state key="normal" title="GO!"/>
                                         <connections>
-                                            <action selector="goTapped:" destination="X1f-KG-bsW" eventType="touchUpInside" id="vRS-Yz-GM6"/>
+                                            <action selector="goButtonTapped:" destination="X1f-KG-bsW" eventType="touchUpInside" id="fEz-nM-05N"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ERROR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQs-yo-3Rq">
@@ -206,7 +206,7 @@
         <!--Home View Controller-->
         <scene sceneID="4dT-L4-Jpi">
             <objects>
-                <viewController id="pIk-Fk-Wgw" customClass="HomeViewController" customModule="LoginBuild" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="pIk-Fk-Wgw" customClass="HomeViewController" customModule="LoginBuild" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yhU-Oz-Ccb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

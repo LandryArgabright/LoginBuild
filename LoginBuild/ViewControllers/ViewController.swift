@@ -18,11 +18,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        setUpElements()
+        self.setUpElements()
     }
 
     
-    func setUpElements() {
+     func setUpElements() {
         
         // Set button styles
         Utilities.styleFilledButton(signupButton)
