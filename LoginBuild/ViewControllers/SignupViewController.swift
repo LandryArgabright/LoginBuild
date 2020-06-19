@@ -35,7 +35,39 @@ class SignupViewController: UIViewController {
         // Do any additional setup after loading the view.
         setUpElements()
     
+        // Gesture swipe right -- go to HomeViewController
+        
+        let returnSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
+        
+        // Recognizes swipe right only
+        returnSwipe.direction = UISwipeGestureRecognizer.Direction.right
+        
+        // Add gesture to view
+        self.view.addGestureRecognizer(returnSwipe)
+        
     }
+    
+    // MARK: Gesture Action
+    
+    @objc func swipeAction(swipe: UISwipeGestureRecognizer) {
+        
+        // Switch statement fires action
+        switch swipe.direction.rawValue {
+        case 1 :
+            
+            // Segue to Home View Controller
+            performSegue(withIdentifier: "swipeBack", sender: self)
+            
+        default:
+            
+            // Nothing else
+            print("Uh Oh")
+            break
+        }
+        
+    }
+    
+    // MARK: Set up View Controller Elements
     
     func setUpElements() {
         
@@ -53,20 +85,15 @@ class SignupViewController: UIViewController {
         // style Button
         Utilities.styleFilledButton(goButton)
         
+        self.view.backgroundColor = UIColor(red: 243/255.0, green: 217/255.0, blue: 187/255.0, alpha: 1.0)
+        
         
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+// MARK: Validate Text Fields
+    
     // Check fields and values -> method returns nil otherwise returns error message as string
     func validateFields() -> String? {
         
@@ -97,6 +124,7 @@ class SignupViewController: UIViewController {
     
     
     
+    // MARK: GO Button Action
     
     @IBAction func goButtonTapped(_ sender: Any) {
         
@@ -169,5 +197,6 @@ class SignupViewController: UIViewController {
         view.window?.rootViewController = homeVCON
         view.window?.makeKeyAndVisible()
     }
-    
+
 }
+

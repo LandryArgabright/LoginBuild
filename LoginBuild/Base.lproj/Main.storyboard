@@ -25,14 +25,17 @@
                                         </constraints>
                                         <state key="normal" title="Sign Up"/>
                                         <connections>
-                                            <segue destination="X1f-KG-bsW" kind="show" id="Pw1-JK-dKD"/>
+                                            <segue destination="X1f-KG-bsW" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="Pw1-JK-dKD">
+                                                <segue key="commit" inheritsFrom="parent" id="BWL-00-gdL"/>
+                                                <segue key="preview" inheritsFrom="commit" id="rmh-Nw-x9R"/>
+                                            </segue>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zn-Q3-cj0">
                                         <rect key="frame" x="0.0" y="70" width="334" height="50"/>
                                         <state key="normal" title="Log In"/>
                                         <connections>
-                                            <segue destination="EnJ-7S-S3b" kind="show" id="VCD-pT-Z9q"/>
+                                            <segue destination="EnJ-7S-S3b" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="VCD-pT-Z9q"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -90,7 +93,7 @@
                                             <action selector="goTapped:" destination="EnJ-7S-S3b" eventType="touchUpInside" id="ShU-Nq-R0i"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ERROR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wkh-dV-vs6">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ERROR" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wkh-dV-vs6">
                                         <rect key="frame" x="0.0" y="210" width="334" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -105,6 +108,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="udI-2l-q0d" firstAttribute="leading" secondItem="VlJ-Ix-nzR" secondAttribute="leading" constant="40" id="YCQ-WH-1dm"/>
                             <constraint firstItem="udI-2l-q0d" firstAttribute="top" secondItem="VlJ-Ix-nzR" secondAttribute="top" constant="40" id="eeZ-DA-aLZ"/>
@@ -118,11 +122,12 @@
                         <outlet property="errorLabel" destination="Wkh-dV-vs6" id="Nka-DB-jxk"/>
                         <outlet property="goButton" destination="tz4-cS-K7d" id="iqb-GM-qby"/>
                         <outlet property="passwordTextField" destination="Kdk-vW-X1F" id="YKh-25-vlc"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="swipeBack2" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="zMZ-QW-UsB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8D4-PC-fsA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1948" y="476"/>
+            <point key="canvasLocation" x="2112" y="449"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="XWD-Wr-KCg">
@@ -165,7 +170,7 @@
                                             <action selector="goButtonTapped:" destination="X1f-KG-bsW" eventType="touchUpInside" id="fEz-nM-05N"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ERROR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQs-yo-3Rq">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ERROR" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQs-yo-3Rq">
                                         <rect key="frame" x="0.0" y="350" width="334" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -182,6 +187,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="sfu-2r-CaW" firstAttribute="leading" secondItem="oOO-sQ-mEw" secondAttribute="leading" constant="40" id="VUm-zO-7dc"/>
                             <constraint firstItem="oOO-sQ-mEw" firstAttribute="trailing" secondItem="sfu-2r-CaW" secondAttribute="trailing" constant="40" id="tLd-Jb-zPO"/>
@@ -197,11 +203,12 @@
                         <outlet property="goButton" destination="pVm-F6-Ikm" id="jAi-kA-URf"/>
                         <outlet property="lastNameTextField" destination="Xss-sO-p7Y" id="Z6t-Li-wuk"/>
                         <outlet property="passwordTextField" destination="bNh-eo-tcw" id="qDZ-m3-bdS"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="swipeBack" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="dOY-Sf-W7h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PFh-74-WYU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1961" y="-179"/>
+            <point key="canvasLocation" x="2030" y="-300"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="4dT-L4-Jpi">
@@ -248,4 +255,8 @@
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Pw1-JK-dKD"/>
+        <segue reference="zMZ-QW-UsB"/>
+    </inferredMetricsTieBreakers>
 </document>

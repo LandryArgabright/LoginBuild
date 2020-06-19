@@ -71,6 +71,13 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		DE0D23BB249D11EE00DCCD9C /* Media */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
 		DEC41CB3249BB5C90009593C = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +106,7 @@
 				DEC41CC8249BB5CB0009593C /* Assets.xcassets */,
 				DEC41CCA249BB5CB0009593C /* LaunchScreen.storyboard */,
 				DEC41CCD249BB5CB0009593C /* Info.plist */,
+				DE0D23BB249D11EE00DCCD9C /* Media */,
 				DEC41CD9249BB7A50009593C /* ViewControllers */,
 				DEC41CDC249BBEB60009593C /* Helpers */,
 			);

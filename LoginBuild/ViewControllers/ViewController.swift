@@ -28,6 +28,8 @@ class ViewController: UIViewController {
         Utilities.styleFilledButton(signupButton)
         Utilities.styleHollowButton(loginButton)
         
+        self.view.backgroundColor = UIColor(red: 243/255.0, green: 217/255.0, blue: 187/255.0, alpha: 1.0)
+        
     }
 
 }

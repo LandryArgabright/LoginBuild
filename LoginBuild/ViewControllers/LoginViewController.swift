@@ -6,7 +6,10 @@
 //  Copyright © 2020 Landry Argabright. All rights reserved.
 //
 
+
 import UIKit
+import FirebaseAuth
+
 
 class LoginViewController: UIViewController {
 
@@ -20,15 +23,50 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
+        
         setUpElements()
+        
+        // Gesture swipe right -- go to HomeViewController
+        
+        let returnSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
+        
+        // Recognizes swipe right only
+        returnSwipe.direction = UISwipeGestureRecognizer.Direction.right
+        
+        // Add gesture to view
+        self.view.addGestureRecognizer(returnSwipe)
+        
+        
+    }
+    // MARK: GESTURE
+    
+    @objc func swipeAction(swipe: UISwipeGestureRecognizer) {
+        
+        // Switch statement fires action
+        switch swipe.direction.rawValue {
+        case 1 :
+            
+            // Segue to Home View Controller
+            performSegue(withIdentifier: "swipeBack2", sender: self)
+            
+        default:
+            
+            // Nothing else
+            print("Uh Oh")
+            break
+        }
+        
     }
     
-
+    // MARK: View Controller Elements
+    
+    
     func setUpElements() {
         
         // Hide error label
@@ -43,21 +81,41 @@ class LoginViewController: UIViewController {
         // Style filled button
         Utilities.styleFilledButton(goButton)
         
+        self.view.backgroundColor = UIColor(red: 243/255.0, green: 217/255.0, blue: 187/255.0, alpha: 1.0)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     
+    // MARK: Go Button Action
+
     @IBAction func goTapped(_ sender: Any) {
         
+        // TODO: Validate Texts Fields
+        // Validate the text field
+        
+        
+        // Create cleaned version of the text field
+        let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        // Signing in the User
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            
+            if error != nil {
+                
+                
+                // Could not sign in
+                self.errorLabel.text = error!.localizedDescription
+                self.errorLabel.alpha = 1
+            }
+            else {
+                let homeVCON = self.storyboard?.instantiateViewController(identifier: "HomeVC")
+                
+                self.view.window?.rootViewController = homeVCON
+                self.view.window?.makeKeyAndVisible()
+            }
+            
+            
+        }
         
     }
     
