@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="efm-09-BnA">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -218,7 +218,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU MADE IT!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1B-Iy-o5o">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU MADE IT!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1B-Iy-o5o">
                                 <rect key="frame" x="75" y="424" width="264" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <nil key="textColor"/>
@@ -227,15 +227,15 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="c1B-Iy-o5o" firstAttribute="centerY" secondItem="yhU-Oz-Ccb" secondAttribute="centerY" id="aKZ-rW-W5x"/>
-                            <constraint firstItem="c1B-Iy-o5o" firstAttribute="centerX" secondItem="yhU-Oz-Ccb" secondAttribute="centerX" id="rwG-1c-Ffm"/>
+                            <constraint firstItem="c1B-Iy-o5o" firstAttribute="centerY" secondItem="yhU-Oz-Ccb" secondAttribute="centerY" id="4fM-AV-PeP"/>
+                            <constraint firstItem="c1B-Iy-o5o" firstAttribute="centerX" secondItem="yhU-Oz-Ccb" secondAttribute="centerX" id="Lzc-Y0-P1m"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hos-aK-Py7"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pBF-rx-rI0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2941" y="169"/>
+            <point key="canvasLocation" x="2940.579710144928" y="168.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Kli-f1-eKs">
@@ -257,6 +257,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Pw1-JK-dKD"/>
-        <segue reference="zMZ-QW-UsB"/>
+        <segue reference="dOY-Sf-W7h"/>
     </inferredMetricsTieBreakers>
 </document>
