@@ -1,6 +1,7 @@
 # Login Template Build
+Getting familiar with Firebase & Firestore
 
-Getting familiar with Firebase
+# Functionality
   - Authentication
   - Firebase Interaction
   - Cocoa Pods
