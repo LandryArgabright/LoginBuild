@@ -1,7 +1,7 @@
 # Login Template Build
 Getting familiar with Firebase & Firestore
 
-# Functionality
+# Details
   - Firebase Interaction & Authentication
   - Cocoa Pods
   - SHA-512 Password Hashing
