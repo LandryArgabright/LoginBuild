@@ -1,7 +1,7 @@
-# LoginBuild
-Getting familiar with Firebase
-- Authentication
-- Firebase Interaction
-- Cocoa Pods
+# Login Template Build
+Getting familiar with Firebase & Firestore
 
-With help from CodeWithChris
+# Details
+  - Firebase Interaction & Authentication
+  - Cocoa Pods
+  - SHA-512 Password Hashing
