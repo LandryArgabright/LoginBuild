@@ -2,7 +2,6 @@
 Getting familiar with Firebase & Firestore
 
 # Functionality
-  - Authentication
-  - Firebase Interaction
+  - Firebase Interaction & Authentication
   - Cocoa Pods
-  - SHA-512 Hashing
+  - SHA-512 Password Hashing
