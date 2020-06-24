@@ -9,7 +9,7 @@
 
 import UIKit
 import FirebaseAuth
-
+import Firebase
 
 class LoginViewController: UIViewController {
 
@@ -44,6 +44,8 @@ class LoginViewController: UIViewController {
         
         
     }
+    
+    
     // MARK: GESTURE
     
     @objc func swipeAction(swipe: UISwipeGestureRecognizer) {
@@ -97,8 +99,12 @@ class LoginViewController: UIViewController {
         let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
+        // Checking hashing
+        let hashPassword = Utilities.hashPassword(password)
+        
+        
         // Signing in the User
-        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+        Auth.auth().signIn(withEmail: email, password: hashPassword) { (result, error) in
             
             if error != nil {
                 
@@ -106,8 +112,11 @@ class LoginViewController: UIViewController {
                 // Could not sign in
                 self.errorLabel.text = error!.localizedDescription
                 self.errorLabel.alpha = 1
+                
             }
             else {
+                
+                
                 let homeVCON = self.storyboard?.instantiateViewController(identifier: "HomeVC")
                 
                 self.view.window?.rootViewController = homeVCON

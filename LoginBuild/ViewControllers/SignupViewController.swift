@@ -143,8 +143,13 @@ class SignupViewController: UIViewController {
                    let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
                    let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
                    let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-                   let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+                   var password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
                    
+                    // MARK: Salt & Hash Password
+                
+                password = Utilities.hashPassword(password)
+                    
+                
                    // Create the User
                    Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
                        // Check for errors
@@ -159,10 +164,12 @@ class SignupViewController: UIViewController {
                            
                            //User was created succesfully
                            // Store firstname last name email and password
+                        // Database Connection
                            let db = Firestore.firestore()
                            
                            
-                           db.collection("users").addDocument(data: ["firstName":firstName, "lastName":lastName, "email":email, "password":password, "uid":result!.user.uid]) { (error) in
+                        //  ADD SALT PROPERTY TO BE ADDED
+                        db.collection("users").addDocument(data: ["firstName":firstName, "lastName":lastName, "email":email, "password":password, "uid":result!.user.uid]) { (error) in
                                
                                
                                if error != nil {
