@@ -239,17 +239,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU MADE IT!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1B-Iy-o5o">
-                                <rect key="frame" x="75" y="424" width="264" height="48"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="is9-hF-ZAg">
+                                <rect key="frame" x="40" y="424" width="334" height="398"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1B-Iy-o5o">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="48"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uay-rX-K40">
+                                        <rect key="frame" x="0.0" y="48" width="334" height="350"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="water_logo" translatesAutoresizingMaskIntoConstraints="NO" id="maL-9W-ocx">
+                                <rect key="frame" x="40" y="84" width="334" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="P23-Rs-JeM"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="c1B-Iy-o5o" firstAttribute="centerY" secondItem="yhU-Oz-Ccb" secondAttribute="centerY" id="4fM-AV-PeP"/>
-                            <constraint firstItem="c1B-Iy-o5o" firstAttribute="centerX" secondItem="yhU-Oz-Ccb" secondAttribute="centerX" id="Lzc-Y0-P1m"/>
+                            <constraint firstItem="is9-hF-ZAg" firstAttribute="leading" secondItem="hos-aK-Py7" secondAttribute="leading" constant="40" id="4FL-gV-CJZ"/>
+                            <constraint firstItem="maL-9W-ocx" firstAttribute="leading" secondItem="hos-aK-Py7" secondAttribute="leading" constant="40" id="7Fl-tC-fBr"/>
+                            <constraint firstItem="maL-9W-ocx" firstAttribute="top" secondItem="hos-aK-Py7" secondAttribute="top" constant="40" id="88b-hB-qx7"/>
+                            <constraint firstItem="is9-hF-ZAg" firstAttribute="top" secondItem="maL-9W-ocx" secondAttribute="bottom" constant="200" id="HOe-Sv-b7J"/>
+                            <constraint firstAttribute="trailing" secondItem="is9-hF-ZAg" secondAttribute="trailing" constant="40" id="TZS-Jt-eEb"/>
+                            <constraint firstItem="hos-aK-Py7" firstAttribute="trailing" secondItem="maL-9W-ocx" secondAttribute="trailing" constant="40" id="dpJ-7S-2iN"/>
+                            <constraint firstItem="hos-aK-Py7" firstAttribute="bottom" secondItem="is9-hF-ZAg" secondAttribute="bottom" constant="40" id="hca-CR-JXX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hos-aK-Py7"/>
                     </view>
